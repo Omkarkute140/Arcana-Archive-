@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="verdigris" data-light="0">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,83 +24,80 @@ html[data-theme="parchment"]{
   --line:#cbb994; --accent:#6d4f0d; --danger:#a03a26; --ok:#4f6b38;
   --shadow:0 10px 26px rgba(80,60,20,.18);
 }
-/* Aegean — deep teal, pale gold */
 html[data-theme="aegean"]{
   --bg:#071012; --bg2:#0b1a1e; --panel:#0f2025; --panel2:#142b31;
   --ink:#d9e6e3; --ink-dim:#8fa8a4; --brass:#c9a227; --brass-soft:#6e5a1e;
   --line:#1f3a40; --accent:#e0c060; --danger:#b4553f; --ok:#6f9a7a;
   --shadow:0 10px 30px rgba(0,0,0,.6);
 }
-/* Verdigris — oxidized copper, dark green */
 html[data-theme="verdigris"]{
   --bg:#0a0f0c; --bg2:#111b15; --panel:#16241c; --panel2:#1d2f24;
   --ink:#e3e8d8; --ink-dim:#a0ab90; --brass:#b87333; --brass-soft:#6b4220;
   --line:#2c4030; --accent:#d4a05a; --danger:#b4553f; --ok:#7f9a63;
   --shadow:0 10px 30px rgba(0,0,0,.55);
 }
-/* Moonstone — cool grey-blue (light) */
 html[data-theme="moonstone"]{
   --bg:#e8ecf0; --bg2:#d9e0e6; --panel:#f4f7fa; --panel2:#e9eef3;
   --ink:#1f2a33; --ink-dim:#5e6b78; --brass:#4a6b8a; --brass-soft:#8fa6b8;
   --line:#c2ced8; --accent:#2f5577; --danger:#a03a26; --ok:#3f6b4f;
   --shadow:0 10px 26px rgba(30,50,70,.18);
 }
-/* Rosewood — warm rose-brown (light) */
 html[data-theme="rosewood"]{
   --bg:#f5eae4; --bg2:#ecd9d0; --panel:#fdf5f0; --panel2:#f7e8e0;
   --ink:#3a2620; --ink-dim:#7a5c50; --brass:#8a4b3a; --brass-soft:#c79a86;
   --line:#dcc2b6; --accent:#6e3526; --danger:#a03a26; --ok:#4f6b38;
   --shadow:0 10px 26px rgba(80,50,40,.18);
 }
-/* Amber — dark warm brown, bright gold */
 html[data-theme="amber"]{
   --bg:#120d07; --bg2:#1c140c; --panel:#241a10; --panel2:#2e2115;
   --ink:#f0e2c8; --ink-dim:#b8a381; --brass:#e0a030; --brass-soft:#8a6218;
   --line:#4a3824; --accent:#f0c060; --danger:#b4553f; --ok:#8f9a5a;
   --shadow:0 10px 30px rgba(0,0,0,.6);
 }
-/* Surrealism — dreamlike violet, rose-gold */
 html[data-theme="surrealism"]{
   --bg:#0d0716; --bg2:#170f24; --panel:#1f1430; --panel2:#2a1b40;
   --ink:#ede4f5; --ink-dim:#a99cc0; --brass:#d4a0e0; --brass-soft:#7a4a80;
   --line:#3d2a55; --accent:#f0b8d8; --danger:#c05070; --ok:#7fbf9a;
   --shadow:0 10px 30px rgba(20,0,40,.6);
 }
-/* Scientific — blueprint cyan on deep navy */
 html[data-theme="scientific"]{
   --bg:#04080f; --bg2:#081220; --panel:#0d1a2c; --panel2:#122438;
   --ink:#d0e4f0; --ink-dim:#7a9ab0; --brass:#40a0d0; --brass-soft:#256580;
   --line:#1a3550; --accent:#60c0e8; --danger:#d05050; --ok:#4fbf80;
   --shadow:0 10px 30px rgba(0,20,40,.65);
 }
-/* Professional — clean corporate slate */
 html[data-theme="professional"]{
   --bg:#14171c; --bg2:#1a1e25; --panel:#21262e; --panel2:#292f38;
   --ink:#e8ecf0; --ink-dim:#98a4b0; --brass:#7a8fa0; --brass-soft:#4a5a68;
   --line:#333a44; --accent:#a0b8cc; --danger:#c05555; --ok:#6aaa80;
   --shadow:0 8px 24px rgba(0,0,0,.5);
 }
-/* Classic — leather-bound library, brass and gilt */
 html[data-theme="classic"]{
   --bg:#17110a; --bg2:#211809; --panel:#2b2010; --panel2:#382a16;
   --ink:#f0e0c0; --ink-dim:#b09870; --brass:#c89030; --brass-soft:#7a5518;
   --line:#4a3818; --accent:#e0b860; --danger:#a84530; --ok:#8a9a50;
   --shadow:0 10px 30px rgba(0,0,0,.6);
 }
-/* Celestial — starry midnight blue */
 html[data-theme="celestial"]{
   --bg:#050a1a; --bg2:#0a1230; --panel:#0f1a3a; --panel2:#152248;
   --ink:#e0e8f8; --ink-dim:#8898c0; --brass:#b8c8e8; --brass-soft:#5a6a98;
   --line:#233060; --accent:#d8e0ff; --danger:#c06070; --ok:#70b890;
   --shadow:0 10px 30px rgba(0,5,30,.6);
 }
+/* Font scaling: html font-size drives rem/em cascade */
+html{font-size:18px}
+html[data-font="small"]{font-size:15px}
+html[data-font="medium"]{font-size:18px}
+html[data-font="large"]{font-size:21px}
+html[data-font="xlarge"]{font-size:24px}
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
 body{
   background:radial-gradient(1200px 700px at 20% -10%,var(--bg2),var(--bg) 60%);
   color:var(--ink);
   font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  font-size:18px; line-height:1.5;
+  font-size:1rem; line-height:1.5;
   min-height:100%;
   text-shadow:0 1px 0 rgba(0,0,0,.35);
   overflow-x:hidden;
@@ -118,6 +115,7 @@ html[data-light="1"] body{text-shadow:0 1px 0 rgba(255,255,255,.5)}
   animation:drift 140s linear infinite;
 }
 html[data-light="1"] #dust{opacity:.28}
+html[data-reduced="1"] #dust{animation:none}
 @keyframes drift{
   0%{transform:translate3d(0,0,0)}
   50%{transform:translate3d(-40px,-60px,0)}
@@ -170,7 +168,7 @@ p.sub{color:var(--ink-dim); margin:.1rem 0 1.6rem; font-style:italic}
   display:flex; flex-direction:column; gap:.5rem;
 }
 .reel{
-  height:var(--reelh); overflow:hidden; position:relative;
+  height:var(--reelh); box-sizing:content-box; overflow:hidden; position:relative;
   border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   background:repeating-linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.12) 1px,transparent 1px,transparent 4px);
 }
@@ -190,12 +188,14 @@ html[data-light="1"] .reel{background:repeating-linear-gradient(180deg,rgba(0,0,
   border:1px solid var(--brass-soft); border-radius:6px; padding:1.2rem 1.3rem;
   box-shadow:var(--shadow); animation:fade .9s ease both;
 }
+html[data-reduced="1"] .card{animation:none}
 @keyframes fade{from{opacity:0; transform:translateY(10px)}to{opacity:1;transform:none}}
 .result{margin-top:1.6rem}
 .result .cat{font-size:.85rem; letter-spacing:.22em; text-transform:uppercase; color:var(--brass)}
 .result h2{font-size:2rem; color:var(--accent)}
 .def{margin:.5rem 0}
 .q{font-style:italic; color:var(--ink-dim)}
+.learned{color:var(--accent); font-style:italic; border-left:2px solid var(--brass-soft); padding-left:.7rem; margin:.6rem 0}
 .chips{display:flex; flex-wrap:wrap; gap:.4rem; margin:.8rem 0}
 .chip{
   font-family:inherit; font-size:.92rem; background:rgba(201,162,39,.08);
@@ -203,6 +203,13 @@ html[data-light="1"] .reel{background:repeating-linear-gradient(180deg,rgba(0,0,
   padding:.22rem .8rem; cursor:pointer;
 }
 .chip:hover{color:var(--accent); border-color:var(--brass)}
+.links{display:flex; flex-wrap:wrap; gap:.4rem; margin:.4rem 0 .8rem}
+.links a{
+  font-family:inherit; font-size:.85rem; letter-spacing:.08em;
+  text-decoration:none; color:var(--ink-dim);
+  border:1px solid var(--line); border-radius:4px; padding:.24rem .7rem;
+}
+.links a:hover{color:var(--accent); border-color:var(--brass-soft)}
 .grid{display:grid; gap:.8rem}
 .searchbar{display:flex; flex-wrap:wrap; gap:.5rem; margin:.8rem 0 1.2rem}
 input[type=text],input[type=search],input[type=number],select,textarea{
@@ -222,6 +229,7 @@ textarea{width:100%; min-height:180px; resize:vertical; line-height:1.45}
 .pill.researched{color:var(--ok); border-color:var(--ok)}
 .pill.seen{color:var(--brass); border-color:var(--brass-soft)}
 .pill.revisit{color:var(--accent); border-color:var(--brass)}
+.pill.friend{color:#c98a4a; border-color:#c98a4a}
 .bar{height:9px; background:var(--panel2); border:1px solid var(--line); border-radius:99px; overflow:hidden}
 .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--brass-soft),var(--brass))}
 .bar-row{display:grid; grid-template-columns:minmax(120px,200px) 1fr auto; gap:.7rem; align-items:center; margin:.35rem 0; font-size:.95rem}
@@ -253,10 +261,28 @@ html[data-light="1"] .overlay{background:rgba(60,45,20,.35)}
 .stat-l{font-size:.82rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-dim)}
 .statbox{border:1px solid var(--line); border-radius:5px; padding:.7rem 1rem; background:var(--panel)}
 .statgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.8rem; margin-bottom:1.4rem}
+.ach-list{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:.6rem}
+.ach{
+  border:1px solid var(--line); border-radius:5px; padding:.6rem .8rem; background:var(--panel);
+  opacity:.5;
+}
+.ach.on{opacity:1; border-color:var(--brass-soft); box-shadow:inset 0 0 0 1px rgba(201,162,39,.15)}
+.ach .nm{font-size:1.05rem; color:var(--accent); letter-spacing:.04em}
+.ach .ds{font-size:.85rem; color:var(--ink-dim)}
+.ach .dt{font-size:.75rem; color:var(--brass); margin-top:.15rem; letter-spacing:.1em; text-transform:uppercase}
+.banner{
+  display:flex; gap:.7rem; align-items:center; justify-content:space-between;
+  border:1px solid var(--brass-soft); border-radius:6px;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  padding:.6rem .9rem; margin:0 0 1.4rem; box-shadow:var(--shadow);
+}
+.banner .msg{flex:1 1 auto; font-size:1rem}
 #toast{position:fixed; left:50%; bottom:5.2rem; transform:translateX(-50%); z-index:99; display:grid; gap:.4rem; justify-items:center; pointer-events:none}
 .toastmsg{background:var(--panel); border:1px solid var(--brass-soft); color:var(--ink); border-radius:4px; padding:.4rem .9rem; font-size:.95rem; box-shadow:var(--shadow); animation:fade .3s ease both}
+.toastmsg.ach{border-color:var(--brass); color:var(--accent); letter-spacing:.06em}
 hr{border:none; border-top:1px solid var(--line); margin:1.4rem 0}
 .small{font-size:.9rem; color:var(--ink-dim)}
+.chk{display:flex; align-items:center; gap:.4rem; font-size:1rem}
 code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:var(--accent)}
 @media (max-width:820px){
   :root{--reelh:3rem}
@@ -275,9 +301,8 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:va
   .bar-row{grid-template-columns:1fr; gap:.2rem}
 }
 @media (prefers-reduced-motion:reduce){
-  #dust{animation:none}
-  .card{animation:none}
-  *{transition-duration:.01ms !important}
+  html[data-reduced="auto"] #dust{animation:none}
+  html[data-reduced="auto"] .card{animation:none}
 }
 </style>
 </head>
@@ -297,6 +322,14 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:va
   </nav>
 
   <main id="main">
+    <div id="backupBanner" class="banner hidden" role="region" aria-label="Backup reminder">
+      <span class="msg">Your archive lives only in this browser. Export a backup.</span>
+      <span class="row">
+        <button class="btn small" id="bannerExport">Export now</button>
+        <button class="btn small" id="bannerSnooze">Remind me later</button>
+      </span>
+    </div>
+
     <section class="view" id="view-spin">
       <h1 class="title">Arcana Archive</h1>
       <p class="sub">A cabinet of research topics, drawn at random. Every draw is new.</p>
@@ -305,6 +338,11 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:va
           <div class="reel" id="reelCat" aria-hidden="true"><div class="strip" id="stripCat"></div></div>
           <div class="reel" id="reelSub" aria-hidden="true"><div class="strip" id="stripSub"></div></div>
           <div class="scanline" aria-hidden="true"></div>
+        </div>
+        <div class="row" style="justify-content:center;width:min(620px,92vw)">
+          <label class="small">Field
+            <select id="lockSelect" aria-label="Category lock"></select>
+          </label>
         </div>
         <div class="controls">
           <button class="btn primary" id="spinBtn" aria-describedby="spinHint">Consult the archive</button>
@@ -336,6 +374,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:va
           <option value="seen">Seen</option>
           <option value="researched">Researched</option>
           <option value="revisit">Revisit later</option>
+          <option value="friend">From a friend</option>
         </select>
       </div>
       <div class="meta" id="libCount"></div>
@@ -382,16 +421,11 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; color:va
 <script>
 /* =========================================================================
    Storage adapter — the ONLY module that touches localStorage / IndexedDB.
-   Swap this object for a cloud adapter (e.g. Supabase) without touching
-   anything else in the app.
    ========================================================================= */
 const Storage = (function () {
   const NS = 'arcana_';
-  const K = {
-    state: 'state', history: 'history', settings: 'settings', custom: 'custom'
-  };
+  const K = { state:'state', history:'history', settings:'settings', custom:'custom' };
 
-  /* ---------- localStorage (small data) ---------- */
   function lsGet(key, fallback) {
     try {
       const raw = localStorage.getItem(NS + key);
@@ -399,30 +433,26 @@ const Storage = (function () {
     } catch (e) { return fallback; }
   }
   function lsSet(key, value) {
-    try {
-      localStorage.setItem(NS + key, JSON.stringify(value));
-      return true;
-    } catch (e) {
-      window.dispatchEvent(new CustomEvent('arcana-storage-error', { detail: e }));
+    try { localStorage.setItem(NS + key, JSON.stringify(value)); return true; }
+    catch (e) {
+      window.dispatchEvent(new CustomEvent('arcana-storage-error', { detail:e }));
       return false;
     }
   }
 
-  /* ---------- IndexedDB (notes, files) ---------- */
   let dbPromise = null;
   function openDB() {
     if (dbPromise) return dbPromise;
     dbPromise = new Promise(function (resolve, reject) {
       if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
       let req;
-      try { req = indexedDB.open(NS + 'db', 1); }
-      catch (e) { reject(e); return; }
+      try { req = indexedDB.open(NS + 'db', 1); } catch (e) { reject(e); return; }
       req.onupgradeneeded = function () {
         const db = req.result;
-        if (!db.objectStoreNames.contains('notes')) db.createObjectStore('notes', { keyPath: 'id' });
+        if (!db.objectStoreNames.contains('notes')) db.createObjectStore('notes', { keyPath:'id' });
         if (!db.objectStoreNames.contains('files')) {
-          const s = db.createObjectStore('files', { keyPath: 'id', autoIncrement: true });
-          s.createIndex('topicId', 'topicId', { unique: false });
+          const s = db.createObjectStore('files', { keyPath:'id', autoIncrement:true });
+          s.createIndex('topicId','topicId',{ unique:false });
         }
       };
       req.onsuccess = function () { resolve(req.result); };
@@ -434,13 +464,11 @@ const Storage = (function () {
     return openDB().then(function (db) {
       return new Promise(function (resolve, reject) {
         let t;
-        try { t = db.transaction(store, mode); }
-        catch (e) { reject(e); return; }
+        try { t = db.transaction(store, mode); } catch (e) { reject(e); return; }
         const s = t.objectStore(store);
-        let out;
-        let r;
+        let out, r;
         try { r = fn(s); } catch (e) { reject(e); return; }
-        if (r) { r.onsuccess = function () { out = r.result; }; }
+        if (r) r.onsuccess = function () { out = r.result; };
         t.oncomplete = function () { resolve(out); };
         t.onerror = function () { reject(t.error); };
         t.onabort = function () { reject(t.error); };
@@ -448,7 +476,6 @@ const Storage = (function () {
     });
   }
 
-  /* ---------- helpers ---------- */
   function blobToB64(blob) {
     return new Promise(function (resolve, reject) {
       const fr = new FileReader();
@@ -464,77 +491,70 @@ const Storage = (function () {
     return new Blob([u], { type: type || 'application/octet-stream' });
   }
 
-  const DEFAULT_STATE = { status: {}, revisit: {}, daily: null, rerolls: { date: '', used: 0, excluded: [] } };
-  const DEFAULT_SETTINGS = { theme: 'dark', sound: false, ambient: false };
+  const DEFAULT_STATE = {
+    status:{}, revisit:{}, daily:null,
+    rerolls:{ date:'', used:0, excluded:[] },
+    source:{},           // topicId -> 'friend'
+    achievements:{},     // id -> ISO date
+    lastBackupAt:null,
+    snoozeBackupUntil:null
+  };
+  const DEFAULT_SETTINGS = {
+    theme:'verdigris', sound:false, ambient:false,
+    categoryLock:'any', fontSize:'medium', motion:'auto'
+  };
 
   return {
-    /* ----- core state ----- */
-    async getState() {
-      const s = lsGet(K.state, null);
-      return Object.assign({}, DEFAULT_STATE, s || {});
-    },
+    async getState() { return Object.assign({}, DEFAULT_STATE, lsGet(K.state, null) || {}); },
     async setState(s) { return lsSet(K.state, s); },
 
-    /* ----- history ----- */
     async getHistory() { return lsGet(K.history, []); },
     async addHistory(entry) {
-      const h = lsGet(K.history, []);
-      h.push(entry);
-      lsSet(K.history, h);
-      return h;
+      const h = lsGet(K.history, []); h.push(entry); lsSet(K.history, h); return h;
     },
     async setHistory(h) { return lsSet(K.history, h); },
 
-    /* ----- status ----- */
-    async setStatus(id, status) {
-      const s = await this.getState();
-      if (status === null) delete s.status[id]; else s.status[id] = status;
-      await this.setState(s);
-      return s;
-    },
-
-    /* ----- notes ----- */
-    async getNotes() { try { return (await tx('notes', 'readonly', s => s.getAll())) || []; } catch (e) { return []; } },
+    async getNotes() { try { return (await tx('notes','readonly',s=>s.getAll())) || []; } catch (e) { return []; } },
     async getNote(id) {
-      try { const n = await tx('notes', 'readonly', s => s.get(id)); return n ? n.md : ''; }
-      catch (e) { return ''; }
+      try {
+        const n = await tx('notes','readonly',s=>s.get(id));
+        return n ? { md:n.md || '', learned:n.learned || '', updated:n.updated || 0 } : { md:'', learned:'', updated:0 };
+      } catch (e) { return { md:'', learned:'', updated:0 }; }
     },
-    async saveNote(id, md) {
-      try { await tx('notes', 'readwrite', s => s.put({ id: id, md: md, updated: Date.now() })); return true; }
-      catch (e) { return false; }
+    async saveNote(id, md, learned) {
+      try {
+        const cur = await this.getNote(id);
+        await tx('notes','readwrite',s=>s.put({
+          id:id, md: md != null ? md : cur.md,
+          learned: learned != null ? learned : cur.learned,
+          updated: Date.now()
+        }));
+        return true;
+      } catch (e) { return false; }
     },
 
-    /* ----- files ----- */
     async saveFile(topicId, file) {
       try {
-        await tx('files', 'readwrite', s => s.add({
-          topicId: topicId, name: file.name, type: file.type || 'application/octet-stream',
-          size: file.size, blob: file, added: Date.now()
+        await tx('files','readwrite',s=>s.add({
+          topicId:topicId, name:file.name, type:file.type || 'application/octet-stream',
+          size:file.size, blob:file, added:Date.now()
         }));
         return true;
       } catch (e) { return false; }
     },
     async getFiles(topicId) {
-      try {
-        const all = await tx('files', 'readonly', s => s.index('topicId').getAll(topicId));
-        return all || [];
-      } catch (e) { return []; }
+      try { return (await tx('files','readonly',s=>s.index('topicId').getAll(topicId))) || []; }
+      catch (e) { return []; }
     },
-    async getAllFiles() { try { return (await tx('files', 'readonly', s => s.getAll())) || []; } catch (e) { return []; } },
-    async deleteFile(id) { try { await tx('files', 'readwrite', s => s.delete(id)); return true; } catch (e) { return false; } },
+    async getAllFiles() { try { return (await tx('files','readonly',s=>s.getAll())) || []; } catch (e) { return []; } },
+    async deleteFile(id) { try { await tx('files','readwrite',s=>s.delete(id)); return true; } catch (e) { return false; } },
 
-    /* ----- settings ----- */
-    async getSettings() {
-      const s = lsGet(K.settings, null);
-      return Object.assign({}, DEFAULT_SETTINGS, s || {});
-    },
+    async getSettings() { return Object.assign({}, DEFAULT_SETTINGS, lsGet(K.settings, null) || {}); },
     async saveSettings(s) { return lsSet(K.settings, s); },
 
-    /* ----- custom content ----- */
     async getCustom() { return lsGet(K.custom, {}); },
     async saveCustom(c) { return lsSet(K.custom, c); },
 
-    /* ----- backup ----- */
     async exportBackup() {
       const [state, history, settings, custom, notes, files] = await Promise.all([
         this.getState(), this.getHistory(), this.getSettings(), this.getCustom(),
@@ -544,45 +564,76 @@ const Storage = (function () {
       for (const f of files) {
         let data = '';
         try { data = await blobToB64(f.blob); } catch (e) { data = ''; }
-        packedFiles.push({ id: f.id, topicId: f.topicId, name: f.name, type: f.type, size: f.size, added: f.added, data: data });
+        packedFiles.push({ id:f.id, topicId:f.topicId, name:f.name, type:f.type, size:f.size, added:f.added, data:data });
       }
       return {
-        app: 'Arcana Archive', version: 1, exported: new Date().toISOString(),
-        state: state, history: history, settings: settings, custom: custom,
-        notes: notes, files: packedFiles
+        app:'arcana-archive', v:1, type:'full', created:new Date().toISOString(),
+        state:state, history:history, settings:settings, custom:custom,
+        notes:notes, files:packedFiles,
+        // legacy keys kept so old importers still work
+        exported:new Date().toISOString()
       };
+    },
+    async exportShare(opts) {
+      opts = opts || {};
+      const state = await this.getState();
+      const statuses = {};
+      Object.keys(state.status).forEach(id => {
+        statuses[id] = { s: state.status[id], revisit: !!state.revisit[id] };
+      });
+      const out = {
+        app:'arcana-archive', v:1, type:'share', created:new Date().toISOString(),
+        statuses: statuses
+      };
+      if (opts.includeNotes) {
+        const notes = await this.getNotes();
+        const nn = {};
+        notes.forEach(n => {
+          if ((n.md && n.md.trim()) || (n.learned && n.learned.trim())) {
+            nn[n.id] = { learned: n.learned || '', text: n.md || '' };
+          }
+        });
+        out.notes = nn;
+      }
+      if (opts.includeCustom) {
+        out.custom = await this.getCustom();
+      }
+      return out;
     },
     async importBackup(obj) {
       if (!obj || typeof obj !== 'object') throw new Error('Not a backup object');
+      if (obj.app !== 'arcana-archive' && obj.app !== 'Arcana Archive') throw new Error('Not an Arcana backup');
       if (!obj.state || !Array.isArray(obj.history)) throw new Error('Missing state or history');
-      if (typeof obj.state !== 'object') throw new Error('Malformed state');
       lsSet(K.state, Object.assign({}, DEFAULT_STATE, obj.state));
       lsSet(K.history, obj.history);
       lsSet(K.settings, Object.assign({}, DEFAULT_SETTINGS, obj.settings || {}));
       lsSet(K.custom, obj.custom && typeof obj.custom === 'object' ? obj.custom : {});
       try {
-        await tx('notes', 'readwrite', s => s.clear());
+        await tx('notes','readwrite',s=>s.clear());
         const notes = Array.isArray(obj.notes) ? obj.notes : [];
         for (const n of notes) {
-          if (n && n.id) await tx('notes', 'readwrite', s => s.put({ id: n.id, md: n.md || '', updated: n.updated || Date.now() }));
+          if (n && n.id) await tx('notes','readwrite',s=>s.put({
+            id:n.id, md:n.md || '', learned:n.learned || '', updated:n.updated || Date.now()
+          }));
         }
-        await tx('files', 'readwrite', s => s.clear());
+        await tx('files','readwrite',s=>s.clear());
         const files = Array.isArray(obj.files) ? obj.files : [];
         for (const f of files) {
           if (!f || !f.name) continue;
           const blob = b64ToBlob(f.data, f.type);
-          await tx('files', 'readwrite', s => s.add({
-            topicId: f.topicId || '', name: f.name, type: f.type || 'application/octet-stream',
-            size: blob.size, blob: blob, added: f.added || Date.now()
+          await tx('files','readwrite',s=>s.add({
+            topicId:f.topicId || '', name:f.name, type:f.type || 'application/octet-stream',
+            size:blob.size, blob:blob, added:f.added || Date.now()
           }));
         }
-      } catch (e) { /* IDB failure should not block the rest */ }
+      } catch (e) { /* ignore IDB errors during import */ }
       return true;
     },
-
-    /* ----- reset ----- */
     async resetHistory() {
-      lsSet(K.state, Object.assign({}, DEFAULT_STATE, { status: {}, revisit: {}, rerolls: { date: '', used: 0, excluded: [] } }));
+      const s = await this.getState();
+      s.status = {}; s.revisit = {}; s.source = {};
+      s.rerolls = { date:'', used:0, excluded:[] };
+      lsSet(K.state, s);
       lsSet(K.history, []);
       return true;
     }
@@ -614,10 +665,7 @@ const RNG = (function () {
     pick(arr) { return arr[this.int(arr.length)]; },
     hash(str) {
       let h = 2166136261 >>> 0;
-      for (let i = 0; i < str.length; i++) {
-        h ^= str.charCodeAt(i);
-        h = Math.imul(h, 16777619) >>> 0;
-      }
+      for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
       return h >>> 0;
     }
   };
@@ -630,38 +678,57 @@ const RNG = (function () {
    ========================================================================= */
 const $ = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
-const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 const norm = s => String(s || '').trim().toLowerCase();
-const iso = d => { const x = new Date(d); return x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0'); };
+const iso = d => { const x = new Date(d); return x.getFullYear() + '-' + String(x.getMonth()+1).padStart(2,'0') + '-' + String(x.getDate()).padStart(2,'0'); };
 const todayStr = () => iso(new Date());
-const REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let settings, state, history, custom, CATS = [], ALL = [], BYID = {}, BYNAME = {};
-let current = null;
-let spinning = false;
-let currentView = 'spin';
+let settings, state, history, custom;
+let CATS = [], ALL = [], BYID = {}, BYNAME = {};
+let current = null, spinning = false, currentView = 'spin';
 let noteTimer = null;
+let notesCount = 0, filesCount = 0;
 
-function toast(msg) {
+/* ---------- toast ---------- */
+function toast(msg, cls) {
   const box = $('#toast');
   const el = document.createElement('div');
-  el.className = 'toastmsg';
+  el.className = 'toastmsg' + (cls ? ' ' + cls : '');
   el.textContent = msg;
   box.appendChild(el);
-  setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 400); }, 3200);
+  setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 400); }, 3400);
 }
 window.addEventListener('arcana-storage-error', () => toast('Storage is full — recent changes may not persist.'));
 
+/* ---------- motion / a11y ---------- */
+function motionReduced() {
+  const m = settings.motion || 'auto';
+  if (m === 'reduced') return true;
+  if (m === 'full') return false;
+  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+}
+function applyA11y() {
+  const t = settings.theme || 'verdigris';
+  document.documentElement.setAttribute('data-theme', t);
+  const light = (t === 'parchment' || t === 'moonstone' || t === 'rosewood');
+  document.documentElement.setAttribute('data-light', light ? '1' : '0');
+  const fs = settings.fontSize || 'medium';
+  document.documentElement.setAttribute('data-font', fs);
+  document.documentElement.setAttribute('data-reduced', motionReduced() ? '1' : '0');
+}
+
+/* ---------- index ---------- */
 function rebuildIndex() {
   CATS = []; ALL = []; BYID = {}; BYNAME = {};
   const add = (key, name, items, isCustom) => {
     const topics = (items || []).map((it, i) => ({
-      id: key + '-' + String(i + 1).padStart(3, '0'),
+      id: key + '-' + String(i+1).padStart(3,'0'),
       cat: key, catName: name,
-      name: it[0] || 'Untitled', def: it[1] || '', related: Array.isArray(it[2]) ? it[2].slice(0, 3) : [], q: it[3] || '',
+      name: it[0] || 'Untitled', def: it[1] || '',
+      related: Array.isArray(it[2]) ? it[2].slice(0,3) : [], q: it[3] || '',
       custom: !!isCustom
     }));
-    CATS.push({ key: key, name: name, topics: topics, custom: !!isCustom });
+    CATS.push({ key:key, name:name, topics:topics, custom:!!isCustom });
     topics.forEach(t => { ALL.push(t); BYID[t.id] = t; BYNAME[norm(t.name)] = t; });
   };
   Object.keys(DATA).forEach(k => add(k, DATA[k].name, DATA[k].items, false));
@@ -670,61 +737,160 @@ function rebuildIndex() {
 
 const isSeen = id => !!state.status[id];
 const isResearched = id => state.status[id] === 'researched';
+const isFriend = id => state.source[id] === 'friend';
 
-function applyTheme() {
-  const t = settings.theme || 'dark';
-  document.documentElement.setAttribute('data-theme', t);
-  const light = (t === 'parchment' || t === 'moonstone' || t === 'rosewood');
-  document.documentElement.setAttribute('data-light', light ? '1' : '0');
+/* own (non-friend) counts */
+const ownSeen = () => ALL.filter(t => isSeen(t.id) && !isFriend(t.id));
+const ownResearched = () => ALL.filter(t => isResearched(t.id) && !isFriend(t.id));
+
+/* ---------- achievements ---------- */
+const ACHIEVEMENTS = [
+  { id:'first_light',    name:'First Light',    desc:'See your first topic.' },
+  { id:'curious',        name:'Curious',        desc:'See 10 topics.' },
+  { id:'archivist',      name:'Archivist',      desc:'Research 100 topics.' },
+  { id:'cartographer',   name:'Cartographer',   desc:'Touch all 12 fields.' },
+  { id:'field_complete', name:'Field Complete', desc:'Research all 50 in one field.' },
+  { id:'week_of_light',  name:'Week of Light',  desc:'Seven days of research in a row.' },
+  { id:'chronicler',     name:'Chronicler',     desc:'Write 10 “What I learned” lines.' },
+  { id:'night_owl',      name:'Night Owl',      desc:'Spin after midnight.' },
+  { id:'dawn_treader',   name:'Dawn Treader',   desc:'Spin before 7 in the morning.' },
+  { id:'steadfast',      name:'Steadfast',      desc:'Attach 3 files or write 3 notes.' },
+  { id:'deep_diver',     name:'Deep Diver',     desc:'Research 10 topics in a single day.' },
+  { id:'polymath',       name:'Polymath',       desc:'Research 10+ topics in 5 fields.' },
+  { id:'wanderer',       name:'Wandering Mind', desc:'Flag 5 topics to revisit.' },
+  { id:'collector',      name:'Collector',      desc:'Write 25 notes.' },
+  { id:'unbroken',       name:'Unbroken',       desc:'A 30-day research streak.' }
+];
+
+async function refreshCounts() {
+  try {
+    const notes = await Storage.getNotes();
+    notesCount = notes.filter(n => (n.md && n.md.trim()) || (n.learned && n.learned.trim())).length;
+  } catch (e) { notesCount = 0; }
+  try { filesCount = (await Storage.getAllFiles()).length; } catch (e) { filesCount = 0; }
+}
+
+async function checkAchievements() {
+  const s = streaks();
+  const myHist = history.filter(h => !isFriend(h.id));
+  const seenN = ownSeen().length;
+  const resN = ownResearched().length;
+
+  const perCatRes = {};
+  CATS.forEach(c => {
+    perCatRes[c.key] = c.topics.filter(t => isResearched(t.id) && !isFriend(t.id)).length;
+  });
+  const perCatSeen = {};
+  CATS.forEach(c => {
+    perCatSeen[c.key] = c.topics.some(t => isSeen(t.id) && !isFriend(t.id));
+  });
+  const byDay = {};
+  myHist.forEach(h => {
+    if (h.type === 'researched') { const d = h.d || iso(h.t); byDay[d] = (byDay[d] || 0) + 1; }
+  });
+  const deepDay = Object.keys(byDay).some(d => byDay[d] >= 10);
+
+  const cond = {
+    first_light:    seenN >= 1,
+    curious:        seenN >= 10,
+    archivist:      resN >= 100,
+    cartographer:   CATS.every(c => perCatSeen[c.key]),
+    field_complete: CATS.some(c => c.topics.length > 0 && c.topics.every(t => isResearched(t.id) && !isFriend(t.id))),
+    week_of_light:  s.best >= 7 || s.current >= 7,
+    chronicler:     notesCount >= 10,
+    night_owl:      myHist.some(h => h.type === 'seen' && new Date(h.t).getHours() < 5),
+    dawn_treader:   myHist.some(h => h.type === 'seen' && new Date(h.t).getHours() >= 4 && new Date(h.t).getHours() < 7),
+    steadfast:      filesCount >= 3 || notesCount >= 3,
+    deep_diver:     deepDay,
+    polymath:       CATS.filter(c => perCatRes[c.key] >= 10).length >= 5,
+    wanderer:       Object.keys(state.revisit).length >= 5,
+    collector:      notesCount >= 25,
+    unbroken:       s.best >= 30
+  };
+
+  let changed = false;
+  const todayIso = todayStr();
+  ACHIEVEMENTS.forEach(a => {
+    if (!state.achievements[a.id] && cond[a.id]) {
+      state.achievements[a.id] = todayIso;
+      changed = true;
+      toast('Achievement: ' + a.name, 'ach');
+    }
+  });
+  if (changed) await Storage.setState(state);
+}
+
+/* ---------- topic picking (with category lock) ---------- */
+function lockedCategory() {
+  const key = settings.categoryLock || 'any';
+  if (key === 'any') return null;
+  return CATS.find(c => c.key === key) || null;
 }
 
 function pickTopic(exclude) {
   const ex = new Set(exclude || []);
-  const cats = CATS.filter(c => c.topics.some(t => !isSeen(t.id) && !ex.has(t.id)));
-  if (!cats.length) return null;
-  const cat = RNG.pick(cats);
+  let cat;
+  const locked = lockedCategory();
+  if (locked) {
+    if (!locked.topics.some(t => !isSeen(t.id) && !ex.has(t.id))) return { lockedExhausted:true, cat:locked };
+    cat = locked;
+  } else {
+    const cats = CATS.filter(c => c.topics.some(t => !isSeen(t.id) && !ex.has(t.id)));
+    if (!cats.length) return null;
+    cat = RNG.pick(cats);
+  }
   const pool = cat.topics.filter(t => !isSeen(t.id) && !ex.has(t.id));
   if (!pool.length) return null;
-  return { cat: cat, topic: RNG.pick(pool) };
+  return { cat:cat, topic:RNG.pick(pool) };
 }
 
 function rerollInfo() {
   if (!state.rerolls || state.rerolls.date !== todayStr()) {
-    state.rerolls = { date: todayStr(), used: 0, excluded: [] };
+    state.rerolls = { date: todayStr(), used:0, excluded:[] };
   }
   if (!Array.isArray(state.rerolls.excluded)) state.rerolls.excluded = [];
   return state.rerolls;
 }
 
+/* ---------- reels ---------- */
 function buildStrip(el, names) {
   el.innerHTML = names.map(n => '<div class="item">' + esc(n) + '</div>').join('');
 }
-
+function itemHeight(stripEl, reelEl) {
+  const first = stripEl.firstElementChild;
+  if (first) {
+    const h = first.getBoundingClientRect().height;
+    if (h > 0) return h;
+  }
+  return reelEl.clientHeight || 54;
+}
 function animateStrip(reelEl, stripEl, names, targetIndex, duration) {
   buildStrip(stripEl, names);
-  const H = reelEl.clientHeight || 54;
+  const H = itemHeight(stripEl, reelEl);
   const yEnd = -(targetIndex * H);
   stripEl.style.transition = 'none';
   stripEl.style.transform = 'translateY(0px)';
   stripEl.style.filter = 'blur(1.6px)';
   void stripEl.offsetHeight;
   const ease = 'cubic-bezier(.17,.89,.32,1.1)';
-  stripEl.style.transition = 'transform ' + duration + 'ms ' + ease + ', filter ' + Math.round(duration * 0.6) + 'ms ease-out ' + Math.round(duration * 0.35) + 'ms';
+  stripEl.style.transition =
+    'transform ' + duration + 'ms ' + ease +
+    ', filter ' + Math.round(duration * 0.6) + 'ms ease-out ' + Math.round(duration * 0.35) + 'ms';
   stripEl.style.transform = 'translateY(' + yEnd + 'px)';
   stripEl.style.filter = 'blur(0px)';
 }
-
+function snapStrip(stripEl, name) {
+  buildStrip(stripEl, [name]);
+  stripEl.style.transition = 'none';
+  stripEl.style.transform = 'translateY(0px)';
+  stripEl.style.filter = 'none';
+}
 function settleStrips(catName, subName) {
-  buildStrip($('#stripCat'), [catName]);
-  $('#stripCat').style.transition = 'none';
-  $('#stripCat').style.transform = 'translateY(0px)';
-  $('#stripCat').style.filter = 'none';
-  buildStrip($('#stripSub'), [subName]);
-  $('#stripSub').style.transition = 'none';
-  $('#stripSub').style.transform = 'translateY(0px)';
-  $('#stripSub').style.filter = 'none';
+  snapStrip($('#stripCat'), catName);
+  snapStrip($('#stripSub'), subName);
 }
 
+/* ---------- sound ---------- */
 let actx = null, humNodes = null;
 function audioCtx() {
   if (!actx) {
@@ -760,10 +926,9 @@ function startAmbient() {
   const lfo = c.createOscillator(), lg = c.createGain();
   lfo.frequency.value = 0.06; lg.gain.value = 0.008;
   lfo.connect(lg).connect(g.gain);
-  o1.connect(g); o2.connect(g);
-  g.connect(c.destination);
+  o1.connect(g); o2.connect(g); g.connect(c.destination);
   o1.start(); o2.start(); lfo.start();
-  humNodes = { g: g, o1: o1, o2: o2, lfo: lfo };
+  humNodes = { g:g, o1:o1, o2:o2, lfo:lfo };
 }
 function stopAmbient() {
   if (!humNodes) return;
@@ -776,14 +941,29 @@ function stopAmbient() {
   humNodes = null;
 }
 
+/* ---------- markdown ---------- */
 function renderMarkdown(md) {
   if (window.marked && window.DOMPurify) {
-    try { return window.DOMPurify.sanitize(window.marked.parse(md || '')); }
-    catch (e) { /* fall through */ }
+    try { return window.DOMPurify.sanitize(window.marked.parse(md || '')); } catch (e) {}
   }
   return '<pre class="plain">' + esc(md || '') + '</pre>';
 }
 
+/* ---------- resource links ---------- */
+function resourceLinks(name) {
+  const q = encodeURIComponent(name);
+  const links = [
+    ['Wikipedia',  'https://en.wikipedia.org/w/index.php?search=' + q],
+    ['YouTube',    'https://www.youtube.com/results?search_query=' + q],
+    ['Scholar',    'https://scholar.google.com/scholar?q=' + q],
+    ['Britannica','https://www.britannica.com/search?query=' + q]
+  ];
+  return '<div class="links">' + links.map(l =>
+    '<a href="' + l[1] + '" target="_blank" rel="noopener noreferrer">' + l[0] + '</a>'
+  ).join('') + '</div>';
+}
+
+/* ---------- views ---------- */
 function switchView(v) {
   currentView = v;
   $$('.view').forEach(s => s.classList.toggle('hidden', s.id !== 'view-' + v));
@@ -802,7 +982,38 @@ function refreshCurrent() {
   if (currentView === 'settings') renderSettings();
 }
 
+/* ---------- spin ---------- */
 const LOAD_MSGS = ['Something is surfacing…', 'Consulting the archive…', 'Sifting the drawers…', 'The brass settles…'];
+
+function showArchiveExhausted() {
+  $('#spinHint').textContent = '';
+  $('#result').classList.remove('hidden');
+  $('#result').innerHTML =
+    '<div class="cat">Archive exhausted</div>' +
+    '<h2>Every topic has been drawn</h2>' +
+    '<p class="def">You have seen all ' + ALL.length + ' topics. Reset to begin again.</p>' +
+    '<div class="row"><button class="btn" id="resetFromSpin">Reset archive</button></div>';
+  const rb = $('#resetFromSpin');
+  if (rb) rb.addEventListener('click', resetArchive);
+}
+function showLockedExhausted(cat) {
+  $('#spinHint').textContent = '';
+  $('#result').classList.remove('hidden');
+  $('#result').innerHTML =
+    '<div class="cat">' + esc(cat.name) + '</div>' +
+    '<h2>This field is complete</h2>' +
+    '<p class="def">You have seen every topic in this field. Unlock the reel to draw from the whole archive, or reset to start again.</p>' +
+    '<div class="row"><button class="btn" id="unlockFromSpin">Unlock</button></div>';
+  const b = $('#unlockFromSpin');
+  if (b) b.addEventListener('click', async () => {
+    settings.categoryLock = 'any';
+    await Storage.saveSettings(settings);
+    renderLockSelect();
+    $('#result').classList.add('hidden');
+    $('#result').innerHTML = '';
+    toast('Unlocked.');
+  });
+}
 
 async function doSpin(isReroll) {
   if (spinning) return;
@@ -811,18 +1022,8 @@ async function doSpin(isReroll) {
   if (isReroll && current) exclude.push(current.topic.id);
 
   const pick = pickTopic(exclude);
-  if (!pick) {
-    $('#spinHint').textContent = '';
-    $('#result').classList.remove('hidden');
-    $('#result').innerHTML =
-      '<div class="cat">Archive exhausted</div>' +
-      '<h2>Every topic has been drawn</h2>' +
-      '<p class="def">You have seen all ' + ALL.length + ' topics in the archive. Reset to begin again.</p>' +
-      '<div class="row"><button class="btn" id="resetFromSpin">Reset archive</button></div>';
-    const rb = $('#resetFromSpin');
-    if (rb) rb.addEventListener('click', resetArchive);
-    return;
-  }
+  if (!pick) { showArchiveExhausted(); return; }
+  if (pick.lockedExhausted) { showLockedExhausted(pick.cat); return; }
 
   spinning = true;
   $('#spinBtn').disabled = true;
@@ -830,33 +1031,43 @@ async function doSpin(isReroll) {
   $('#result').classList.add('hidden');
   $('#result').innerHTML = '';
 
+  const locked = lockedCategory();
   const catNames = CATS.map(c => c.name);
-  const catSeq = [];
-  for (let i = 0; i < 24; i++) catSeq.push(RNG.pick(catNames));
-  catSeq.push(pick.cat.name);
+  let catSeq;
+  if (locked) {
+    catSeq = [locked.name];
+  } else {
+    catSeq = [];
+    for (let i = 0; i < 24; i++) catSeq.push(RNG.pick(catNames));
+    catSeq.push(pick.cat.name);
+  }
 
   const subNames = pick.cat.topics.map(t => t.name);
   const subSeq = [];
   for (let i = 0; i < 18; i++) subSeq.push(RNG.pick(subNames));
   subSeq.push(pick.topic.name);
 
-  if (REDUCED) {
+  if (motionReduced()) {
     settleStrips(pick.cat.name, pick.topic.name);
     finishSpin(pick, isReroll);
     return;
   }
 
-  $('#spinHint').textContent = RNG.pick(LOAD_MSGS);
-  animateStrip($('#reelCat'), $('#stripCat'), catSeq, catSeq.length - 1, 2500);
+  if (locked) {
+    settleStrips(locked.name, '—');
+  } else {
+    $('#spinHint').textContent = RNG.pick(LOAD_MSGS);
+    animateStrip($('#reelCat'), $('#stripCat'), catSeq, catSeq.length - 1, 2500);
+  }
 
   setTimeout(() => {
     if (settings.sound) playThunk();
     $('#spinHint').textContent = RNG.pick(LOAD_MSGS);
     animateStrip($('#reelSub'), $('#stripSub'), subSeq, subSeq.length - 1, 2000);
-  }, 2560);
+  }, locked ? 120 : 2560);
 
-  setTimeout(() => { if (settings.sound) playThunk(); }, 4400);
-  setTimeout(() => finishSpin(pick, isReroll), 4700);
+  setTimeout(() => { if (settings.sound) playThunk(); }, locked ? 1900 : 4400);
+  setTimeout(() => finishSpin(pick, isReroll), locked ? 2200 : 4700);
 }
 
 async function finishSpin(pick, isReroll) {
@@ -865,6 +1076,10 @@ async function finishSpin(pick, isReroll) {
   $('#spinHint').textContent = '';
   current = pick;
 
+  // snap reels exactly onto the chosen names (fixes any residual offset)
+  snapStrip($('#stripCat'), pick.cat.name);
+  snapStrip($('#stripSub'), pick.topic.name);
+
   if (isReroll) {
     const info = rerollInfo();
     info.excluded.push(pick.topic.id);
@@ -872,12 +1087,18 @@ async function finishSpin(pick, isReroll) {
     await Storage.setState(state);
   }
 
-  state.status[pick.topic.id] = state.status[pick.topic.id] === 'researched' ? 'researched' : 'seen';
+  const wasUnseen = !isSeen(pick.topic.id);
+  if (wasUnseen) {
+    state.status[pick.topic.id] = 'seen';
+    // user's own draw — a friend-source flag is cleared if the user themselves spun it
+    if (isFriend(pick.topic.id)) delete state.source[pick.topic.id];
+  }
   await Storage.setState(state);
-  history = await Storage.addHistory({ id: pick.topic.id, type: 'seen', t: Date.now(), d: todayStr() });
+  history = await Storage.addHistory({ id:pick.topic.id, type:'seen', t:Date.now(), d:todayStr() });
 
   renderResult(pick.topic);
   updateRerollUI();
+  await checkAchievements();
   refreshCurrent();
 }
 
@@ -889,15 +1110,20 @@ function updateRerollUI() {
   $('#rerollCount').textContent = 'Rerolls left today: ' + left + ' / 3';
 }
 
-function renderResult(t) {
-  const el = $('#result');
+/* ---------- result card ---------- */
+function resultCardHTML(t) {
   const st = state.status[t.id];
-  el.innerHTML =
-    '<div class="cat">' + esc(t.catName) + '</div>' +
+  const friend = isFriend(t.id);
+  const learned = current && current.topic && current.topic.id === t.id ? (t._learned || '') : '';
+  return '' +
+    '<div class="cat">' + esc(t.catName) + (friend ? ' · from a friend' : '') + '</div>' +
     '<h2>' + esc(t.name) + '</h2>' +
     '<p class="def">' + esc(t.def) + '</p>' +
     '<p class="q">' + esc(t.q) + '</p>' +
-    '<div class="chips">' + t.related.map(r => '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+    (learned ? '<p class="learned">' + esc(learned) + '</p>' : '') +
+    '<div class="chips">' + t.related.map(r =>
+      '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+    resourceLinks(t.name) +
     '<div class="row">' +
       '<button class="btn" data-act="researched">' + (st === 'researched' ? 'Researched ✓' : 'Mark researched') + '</button>' +
       '<button class="btn" data-act="revisit">' + (state.revisit[t.id] ? 'Revisit ✓' : 'Revisit later') + '</button>' +
@@ -905,88 +1131,18 @@ function renderResult(t) {
       '<button class="btn" data-act="files">Attach files</button>' +
       '<button class="btn" data-act="share">Share card</button>' +
     '</div>';
+}
+
+async function renderResult(t) {
+  const note = await Storage.getNote(t.id);
+  t._learned = note.learned || '';
+  const el = $('#result');
+  el.innerHTML = resultCardHTML(t);
   el.classList.remove('hidden');
-  el.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {
-    const act = b.dataset.act;
-    if (act === 'researched') markResearched(t.id);
-    else if (act === 'revisit') toggleRevisit(t.id);
-    else if (act === 'notes' || act === 'files') openTopic(t.id, act);
-    else if (act === 'share') shareCard(t);
-  }));
-  el.querySelectorAll('[data-peek]').forEach(b => b.addEventListener('click', () => openPeek(b.dataset.peek)));
+  wireCard(el, t);
 }
 
-async function markResearched(id) {
-  const already = state.status[id] === 'researched';
-  if (!already) {
-    state.status[id] = 'researched';
-    await Storage.setState(state);
-    history = await Storage.addHistory({ id: id, type: 'researched', t: Date.now(), d: todayStr() });
-    toast('Marked as researched.');
-  }
-  if (current && current.topic.id === id) renderResult(current.topic);
-  refreshCurrent();
-  closePeek();
-  closeModal();
-}
-async function toggleRevisit(id) {
-  state.revisit[id] = !state.revisit[id];
-  if (!state.revisit[id]) delete state.revisit[id];
-  await Storage.setState(state);
-  if (state.revisit[id]) history = await Storage.addHistory({ id: id, type: 'revisit', t: Date.now(), d: todayStr() });
-  if (current && current.topic.id === id) renderResult(current.topic);
-  refreshCurrent();
-}
-
-function dailyTopic() {
-  const t = todayStr();
-  if (state.daily && state.daily.date === t && BYID[state.daily.id]) return BYID[state.daily.id];
-  const unseen = ALL.filter(x => !isSeen(x.id));
-  if (!unseen.length) return null;
-  const h = RNG.hash('arcana-daily-' + t);
-  const pick = unseen[h % unseen.length];
-  state.daily = { date: t, id: pick.id };
-  Storage.setState(state);
-  return pick;
-}
-
-function renderDaily() {
-  const body = $('#dailyBody');
-  const t = dailyTopic();
-  if (!t) {
-    body.innerHTML = '<div class="card"><div class="cat">Archive exhausted</div><h2>Nothing left unseen</h2>' +
-      '<p class="def">Every topic has been drawn. Reset the archive to start again.</p>' +
-      '<button class="btn" id="dailyReset">Reset archive</button></div>';
-    $('#dailyReset').addEventListener('click', resetArchive);
-    return;
-  }
-  body.innerHTML = topicCardHTML(t, { showDaily: true });
-  wireTopicCard(body, t);
-}
-
-function topicCardHTML(t, opts) {
-  opts = opts || {};
-  const st = state.status[t.id];
-  const statusLabel = st === 'researched' ? 'Researched' : st === 'seen' ? 'Seen' : 'Unseen';
-  return '' +
-    '<div class="card">' +
-      '<div class="cat">' + esc(t.catName) + (opts.showDaily ? ' · Daily draw' : '') + '</div>' +
-      '<h2>' + esc(t.name) + '</h2>' +
-      '<p class="def">' + esc(t.def) + '</p>' +
-      '<p class="q">' + esc(t.q) + '</p>' +
-      '<div class="chips">' + t.related.map(r => '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
-      '<div class="row">' +
-        '<span class="pill ' + (st === 'researched' ? 'researched' : st === 'seen' ? 'seen' : '') + '">' + statusLabel + '</span>' +
-        (state.revisit[t.id] ? '<span class="pill revisit">Revisit</span>' : '') +
-        '<button class="btn" data-act="researched">' + (st === 'researched' ? 'Researched ✓' : 'Mark researched') + '</button>' +
-        '<button class="btn" data-act="revisit">' + (state.revisit[t.id] ? 'Revisit ✓' : 'Revisit later') + '</button>' +
-        '<button class="btn" data-act="notes">Notes</button>' +
-        '<button class="btn" data-act="files">Attach files</button>' +
-        '<button class="btn" data-act="share">Share card</button>' +
-      '</div>' +
-    '</div>';
-}
-function wireTopicCard(root, t) {
+function wireCard(root, t) {
   root.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {
     const act = b.dataset.act;
     if (act === 'researched') markResearched(t.id);
@@ -997,6 +1153,102 @@ function wireTopicCard(root, t) {
   root.querySelectorAll('[data-peek]').forEach(b => b.addEventListener('click', () => openPeek(b.dataset.peek)));
 }
 
+/* ---------- status actions ---------- */
+async function markResearched(id, opts) {
+  opts = opts || {};
+  const already = state.status[id] === 'researched';
+  if (!already) {
+    state.status[id] = 'researched';
+    if (isFriend(id)) delete state.source[id];
+    await Storage.setState(state);
+    history = await Storage.addHistory({ id:id, type:'researched', t:Date.now(), d:todayStr() });
+
+    if (!opts.silent) {
+      const note = await Storage.getNote(id);
+      if (!note.learned) {
+        const v = window.prompt('Optional: one line about what you learned (max 200 characters).\nLeave blank to skip.', '');
+        if (v && v.trim()) {
+          await Storage.saveNote(id, note.md, v.trim().slice(0,200));
+          toast('Saved.');
+        }
+      }
+    } else {
+      toast('Marked as researched.');
+    }
+  }
+  if (current && current.topic.id === id) await renderResult(current.topic);
+  await refreshCounts();
+  await checkAchievements();
+  refreshCurrent();
+  closePeek();
+  if (!opts.keepModal) closeModal();
+}
+async function toggleRevisit(id) {
+  if (state.revisit[id]) delete state.revisit[id];
+  else {
+    state.revisit[id] = true;
+    history = await Storage.addHistory({ id:id, type:'revisit', t:Date.now(), d:todayStr() });
+  }
+  await Storage.setState(state);
+  if (current && current.topic.id === id) await renderResult(current.topic);
+  await checkAchievements();
+  refreshCurrent();
+}
+
+/* ---------- Daily ---------- */
+function dailyTopic() {
+  const t = todayStr();
+  if (state.daily && state.daily.date === t && BYID[state.daily.id]) return BYID[state.daily.id];
+  const unseen = ALL.filter(x => !isSeen(x.id));
+  if (!unseen.length) return null;
+  const h = RNG.hash('arcana-daily-' + t);
+  const pick = unseen[h % unseen.length];
+  state.daily = { date:t, id:pick.id };
+  Storage.setState(state);
+  return pick;
+}
+function renderDaily() {
+  const body = $('#dailyBody');
+  const t = dailyTopic();
+  if (!t) {
+    body.innerHTML = '<div class="card"><div class="cat">Archive exhausted</div><h2>Nothing left unseen</h2>' +
+      '<p class="def">Every topic has been drawn. Reset the archive to start again.</p>' +
+      '<button class="btn" id="dailyReset">Reset archive</button></div>';
+    $('#dailyReset').addEventListener('click', resetArchive);
+    return;
+  }
+  body.innerHTML = topicCardHTML(t);
+  wireCard(body, t);
+}
+
+function topicCardHTML(t) {
+  const st = state.status[t.id];
+  const friend = isFriend(t.id);
+  const statusLabel = st === 'researched' ? 'Researched' : st === 'seen' ? 'Seen' : 'Unseen';
+  return '' +
+    '<div class="card">' +
+      '<div class="cat">' + esc(t.catName) + (friend ? ' · from a friend' : '') + '</div>' +
+      '<h2>' + esc(t.name) + '</h2>' +
+      '<p class="def">' + esc(t.def) + '</p>' +
+      '<p class="q">' + esc(t.q) + '</p>' +
+      (t._learned ? '<p class="learned">' + esc(t._learned) + '</p>' : '') +
+      '<div class="chips">' + t.related.map(r =>
+        '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+      resourceLinks(t.name) +
+      '<div class="row">' +
+        '<span class="pill ' + (st === 'researched' ? 'researched' : st === 'seen' ? 'seen' : '') + '">' + statusLabel + '</span>' +
+        (state.revisit[t.id] ? '<span class="pill revisit">Revisit</span>' : '') +
+        (friend ? '<span class="pill friend">From a friend</span>' : '') +
+        '<button class="btn" data-act="researched">' + (st === 'researched' ? 'Researched ✓' : 'Mark researched') + '</button>' +
+        '<button class="btn" data-act="revisit">' + (state.revisit[t.id] ? 'Revisit ✓' : 'Revisit later') + '</button>' +
+        '<button class="btn" data-act="notes">Notes</button>' +
+        '<button class="btn" data-act="files">Attach files</button>' +
+        '<button class="btn" data-act="share">Share card</button>' +
+      '</div>' +
+    '</div>';
+}
+
+/* ---------- Library ---------- */
 function renderLibrary() {
   const sel = $('#libCat');
   const prev = sel.value;
@@ -1014,6 +1266,7 @@ function renderLibrary() {
     if (st === 'seen' && state.status[t.id] !== 'seen') return false;
     if (st === 'researched' && !isResearched(t.id)) return false;
     if (st === 'revisit' && !state.revisit[t.id]) return false;
+    if (st === 'friend' && !isFriend(t.id)) return false;
     if (q) {
       const hay = norm(t.name + ' ' + t.def + ' ' + t.related.join(' '));
       if (hay.indexOf(q) === -1) return false;
@@ -1025,15 +1278,19 @@ function renderLibrary() {
   const list = $('#libList');
   if (!rows.length) { list.innerHTML = '<div class="small">No topics match.</div>'; return; }
   list.innerHTML = rows.slice(0, 400).map(t => {
-    const pill = isResearched(t.id) ? '<span class="pill researched">Researched</span>'
-      : isSeen(t.id) ? '<span class="pill seen">Seen</span>' : '<span class="pill">Unseen</span>';
+    const pills = [];
+    if (isResearched(t.id)) pills.push('<span class="pill researched">Researched</span>');
+    else if (isSeen(t.id)) pills.push('<span class="pill seen">Seen</span>');
+    else pills.push('<span class="pill">Unseen</span>');
+    if (isFriend(t.id)) pills.push('<span class="pill friend">From a friend</span>');
     return '<button class="trow" data-id="' + esc(t.id) + '">' +
       '<span><span class="nm">' + esc(t.name) + '</span><br><span class="small">' + esc(t.catName) + '</span></span>' +
-      pill + '</button>';
+      '<span class="row">' + pills.join('') + '</span></button>';
   }).join('');
   list.querySelectorAll('[data-id]').forEach(b => b.addEventListener('click', () => openTopic(b.dataset.id)));
 }
 
+/* ---------- History ---------- */
 function renderHistory() {
   const list = $('#histList');
   const items = history.slice().reverse();
@@ -1045,38 +1302,46 @@ function renderHistory() {
     const label = h.type === 'researched' ? 'Researched' : h.type === 'revisit' ? 'Revisit' : 'Drawn';
     const cls = h.type === 'researched' ? 'researched' : h.type === 'revisit' ? 'revisit' : 'seen';
     const d = new Date(h.t || Date.now());
+    const friend = isFriend(h.id) ? '<span class="pill friend">From a friend</span>' : '';
     return '<div class="trow" data-id="' + esc(h.id) + '">' +
       '<span><span class="nm">' + esc(name) + '</span><br><span class="small">' + esc(d.toLocaleString()) + '</span></span>' +
-      '<span class="pill ' + cls + '">' + label + '</span></div>';
+      '<span class="row"><span class="pill ' + cls + '">' + label + '</span>' + friend + '</span></div>';
   }).join('');
   list.querySelectorAll('[data-id]').forEach(b => b.addEventListener('click', () => openTopic(b.dataset.id)));
 }
 
+/* ---------- streaks ---------- */
 function streaks() {
-  const days = new Set(history.filter(h => h.type === 'researched').map(h => h.d || iso(h.t)));
+  const days = new Set(
+    history
+      .filter(h => h.type === 'researched' && !isFriend(h.id))
+      .map(h => h.d || iso(h.t))
+  );
   const arr = Array.from(days).sort();
   let best = 0, run = 0, prev = null;
   for (const d of arr) {
     if (prev) {
-      const p = new Date(prev + 'T00:00:00');
-      p.setDate(p.getDate() + 1);
+      const p = new Date(prev + 'T00:00:00'); p.setDate(p.getDate() + 1);
       run = (iso(p) === d) ? run + 1 : 1;
     } else run = 1;
     if (run > best) best = run;
     prev = d;
   }
   let cur = 0;
-  const d = new Date(); d.setHours(0, 0, 0, 0);
+  const d = new Date(); d.setHours(0,0,0,0);
   if (!days.has(iso(d))) d.setDate(d.getDate() - 1);
   while (days.has(iso(d))) { cur++; d.setDate(d.getDate() - 1); }
   return { current: cur, best: best };
 }
 
+/* ---------- Stats ---------- */
+function statBox(v, l) { return '<div class="statbox"><div class="stat">' + esc(v) + '</div><div class="stat-l">' + esc(l) + '</div></div>'; }
+
 function renderStats() {
   const body = $('#statsBody');
   const total = ALL.length;
-  const seen = ALL.filter(t => isSeen(t.id)).length;
-  const res = ALL.filter(t => isResearched(t.id)).length;
+  const seen = ALL.filter(t => isSeen(t.id) && !isFriend(t.id)).length;
+  const res = ALL.filter(t => isResearched(t.id) && !isFriend(t.id)).length;
   const rev = Object.keys(state.revisit).length;
   const s = streaks();
 
@@ -1090,7 +1355,7 @@ function renderStats() {
 
   html += '<h3>Progress by category</h3>';
   html += CATS.map(c => {
-    const n = c.topics.filter(t => isResearched(t.id)).length;
+    const n = c.topics.filter(t => isResearched(t.id) && !isFriend(t.id)).length;
     const pct = c.topics.length ? Math.round(n / c.topics.length * 100) : 0;
     return '<div class="bar-row"><span>' + esc(c.name) + '</span>' +
       '<span class="bar"><i style="width:' + pct + '%"></i></span>' +
@@ -1099,28 +1364,44 @@ function renderStats() {
 
   html += '<h3>Researched per week</h3>' + weeklyChart();
   html += '<h3>Last 12 months</h3>' + heatMap();
+  html += '<h3>Achievements</h3>' + achievementsHTML();
   body.innerHTML = html;
 }
-function statBox(v, l) { return '<div class="statbox"><div class="stat">' + esc(v) + '</div><div class="stat-l">' + esc(l) + '</div></div>'; }
+
+function achievementsHTML() {
+  const unlockedCount = ACHIEVEMENTS.filter(a => state.achievements[a.id]).length;
+  let h = '<p class="small">' + unlockedCount + ' of ' + ACHIEVEMENTS.length + ' unlocked.</p>';
+  h += '<div class="ach-list">';
+  ACHIEVEMENTS.forEach(a => {
+    const on = !!state.achievements[a.id];
+    h += '<div class="ach' + (on ? ' on' : '') + '">' +
+      '<div class="nm">' + esc(a.name) + '</div>' +
+      '<div class="ds">' + esc(a.desc) + '</div>' +
+      (on ? '<div class="dt">' + esc(state.achievements[a.id]) + '</div>' : '') +
+    '</div>';
+  });
+  h += '</div>';
+  return h;
+}
 
 function weeklyChart() {
   const weeks = [];
-  const now = new Date(); now.setHours(0, 0, 0, 0);
+  const now = new Date(); now.setHours(0,0,0,0);
   for (let w = 11; w >= 0; w--) {
     const end = new Date(now); end.setDate(end.getDate() - w * 7);
     const start = new Date(end); start.setDate(start.getDate() - 6);
     const a = iso(start), b = iso(end);
-    const n = history.filter(h => h.type === 'researched' && h.d >= a && h.d <= b).length;
-    weeks.push({ start: a, n: n });
+    const n = history.filter(h => h.type === 'researched' && !isFriend(h.id) && h.d >= a && h.d <= b).length;
+    weeks.push({ start:a, n:n });
   }
   const max = Math.max(1, ...weeks.map(w => w.n));
   const W = 12 * 34, H = 120;
   let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '" role="img" aria-label="Researched topics per week">';
   weeks.forEach((w, i) => {
     const h = Math.round((w.n / max) * 80);
-    svg += '<rect x="' + (i * 34 + 6) + '" y="' + (90 - h) + '" width="20" height="' + h + '" fill="var(--brass)" opacity="0.85" rx="2"></rect>';
-    svg += '<text x="' + (i * 34 + 16) + '" y="106" font-size="11" fill="var(--ink-dim)" text-anchor="middle">' + esc(w.start.slice(5)) + '</text>';
-    if (w.n) svg += '<text x="' + (i * 34 + 16) + '" y="' + (86 - h) + '" font-size="11" fill="var(--ink-dim)" text-anchor="middle">' + w.n + '</text>';
+    svg += '<rect x="' + (i*34+6) + '" y="' + (90-h) + '" width="20" height="' + h + '" fill="var(--brass)" opacity="0.85" rx="2"></rect>';
+    svg += '<text x="' + (i*34+16) + '" y="106" font-size="11" fill="var(--ink-dim)" text-anchor="middle">' + esc(w.start.slice(5)) + '</text>';
+    if (w.n) svg += '<text x="' + (i*34+16) + '" y="' + (86-h) + '" font-size="11" fill="var(--ink-dim)" text-anchor="middle">' + w.n + '</text>';
   });
   svg += '</svg>';
   return svg;
@@ -1128,11 +1409,11 @@ function weeklyChart() {
 
 function heatMap() {
   const counts = {};
-  history.filter(h => h.type === 'researched').forEach(h => {
+  history.filter(h => h.type === 'researched' && !isFriend(h.id)).forEach(h => {
     const d = h.d || iso(h.t);
     counts[d] = (counts[d] || 0) + 1;
   });
-  const end = new Date(); end.setHours(0, 0, 0, 0);
+  const end = new Date(); end.setHours(0,0,0,0);
   const start = new Date(end); start.setDate(start.getDate() - 364);
   start.setDate(start.getDate() - start.getDay());
   const days = [];
@@ -1141,7 +1422,7 @@ function heatMap() {
   for (let i = 0; i < days.length; i += 7) {
     html += '<div class="hcol">';
     for (let j = 0; j < 7; j++) {
-      const d = days[i + j];
+      const d = days[i+j];
       if (!d) { html += '<div class="hcell" style="visibility:hidden"></div>'; continue; }
       const n = counts[d] || 0;
       const lvl = n === 0 ? '' : n === 1 ? 'l1' : n === 2 ? 'l2' : n <= 4 ? 'l3' : 'l4';
@@ -1153,39 +1434,53 @@ function heatMap() {
   return html;
 }
 
+/* ---------- Settings ---------- */
 async function renderSettings() {
   const body = $('#settingsBody');
   let usage = '';
   try {
     if (navigator.storage && navigator.storage.estimate) {
       const est = await navigator.storage.estimate();
-      usage = (est.usage / 1048576).toFixed(2) + ' MB used of about ' + (est.quota / 1048576).toFixed(0) + ' MB available.';
+      usage = (est.usage/1048576).toFixed(2) + ' MB used of about ' + (est.quota/1048576).toFixed(0) + ' MB available.';
     }
   } catch (e) { usage = 'Storage estimate unavailable.'; }
+
+  const lastB = state.lastBackupAt ? new Date(state.lastBackupAt).toLocaleString() : 'never';
 
   body.innerHTML =
     '<div class="card">' +
       '<h3>Appearance</h3>' +
-      '<div class="row"><label>Theme <select id="setTheme">' +
-        '<option value="dark"' + (settings.theme === 'dark' ? ' selected' : '') + '>Obsidian (dark)</option>' +
-        '<option value="parchment"' + (settings.theme === 'parchment' ? ' selected' : '') + '>Parchment (light)</option>' +
-        '<option value="aegean"' + (settings.theme === 'aegean' ? ' selected' : '') + '>Aegean (dark)</option>' +
-        '<option value="verdigris"' + (settings.theme === 'verdigris' ? ' selected' : '') + '>Verdigris (dark)</option>' +
-        '<option value="moonstone"' + (settings.theme === 'moonstone' ? ' selected' : '') + '>Moonstone (light)</option>' +
-        '<option value="rosewood"' + (settings.theme === 'rosewood' ? ' selected' : '') + '>Rosewood (light)</option>' +
-        '<option value="amber"' + (settings.theme === 'amber' ? ' selected' : '') + '>Amber (dark)</option>' +
-        '<option value="surrealism"' + (settings.theme === 'surrealism' ? ' selected' : '') + '>Surrealism (dark)</option>' +
-        '<option value="scientific"' + (settings.theme === 'scientific' ? ' selected' : '') + '>Scientific (dark)</option>' +
-        '<option value="professional"' + (settings.theme === 'professional' ? ' selected' : '') + '>Professional (dark)</option>' +
-        '<option value="classic"' + (settings.theme === 'classic' ? ' selected' : '') + '>Classic (dark)</option>' +
-        '<option value="celestial"' + (settings.theme === 'celestial' ? ' selected' : '') + '>Celestial (dark)</option>' +
-      '</select></label></div>' +
+      '<div class="row">' +
+        '<label>Theme <select id="setTheme">' +
+          themeOptions(settings.theme) +
+        '</select></label>' +
+        '<label>Font size <select id="setFont">' +
+          '<option value="small"' + (settings.fontSize === 'small' ? ' selected' : '') + '>Small</option>' +
+          '<option value="medium"' + (settings.fontSize === 'medium' ? ' selected' : '') + '>Medium</option>' +
+          '<option value="large"' + (settings.fontSize === 'large' ? ' selected' : '') + '>Large</option>' +
+          '<option value="xlarge"' + (settings.fontSize === 'xlarge' ? ' selected' : '') + '>Extra large</option>' +
+        '</select></label>' +
+        '<label>Motion <select id="setMotion">' +
+          '<option value="auto"' + (settings.motion === 'auto' ? ' selected' : '') + '>Auto (follow system)</option>' +
+          '<option value="reduced"' + (settings.motion === 'reduced' ? ' selected' : '') + '>Reduced</option>' +
+          '<option value="full"' + (settings.motion === 'full' ? ' selected' : '') + '>Full</option>' +
+        '</select></label>' +
+      '</div>' +
       '<h3>Sound</h3>' +
       '<div class="row">' +
-        '<label><input type="checkbox" id="setSound"' + (settings.sound ? ' checked' : '') + '> Settle thunk</label>' +
-        '<label><input type="checkbox" id="setAmbient"' + (settings.ambient ? ' checked' : '') + '> Ambient hum</label>' +
+        '<label class="chk"><input type="checkbox" id="setSound"' + (settings.sound ? ' checked' : '') + '> Settle thunk</label>' +
+        '<label class="chk"><input type="checkbox" id="setAmbient"' + (settings.ambient ? ' checked' : '') + '> Ambient hum</label>' +
       '</div>' +
       '<p class="small">Sound is off by default and synthesised in the browser.</p>' +
+    '</div>' +
+
+    '<div class="card" style="margin-top:1rem">' +
+      '<h3>Spin</h3>' +
+      '<p class="small">Lock the reel to one field. Draws stay uniform among that field’s unseen topics.</p>' +
+      '<label>Field <select id="setLock">' +
+        '<option value="any"' + (settings.categoryLock === 'any' ? ' selected' : '') + '>Any field</option>' +
+        CATS.map(c => '<option value="' + esc(c.key) + '"' + (settings.categoryLock === c.key ? ' selected' : '') + '>' + esc(c.name) + '</option>').join('') +
+      '</select></label>' +
     '</div>' +
 
     '<div class="card" style="margin-top:1rem">' +
@@ -1196,26 +1491,34 @@ async function renderSettings() {
     '</div>' +
 
     '<div class="card" style="margin-top:1rem">' +
-      '<h3>Backup</h3>' +
-      '<p class="small">Everything: history, statuses, notes, settings, custom content and files (base64).</p>' +
+      '<h3>Backup &amp; sync</h3>' +
+      '<p class="small">Last backup: ' + esc(lastB) + '.</p>' +
       '<div class="row">' +
-        '<button class="btn" id="expBtn">Export backup</button>' +
-        '<button class="btn" id="impBtn">Import backup</button>' +
+        '<button class="btn" id="expBtn">Export full backup</button>' +
+        '<button class="btn" id="shareBtn">Share my history</button>' +
+        '<button class="btn" id="impBtn">Import</button>' +
         '<input type="file" id="impFile" accept="application/json,.json" class="hidden">' +
       '</div>' +
-      '<p class="small" style="margin-top:.6rem">' + esc(usage) + '</p>' +
+      '<p class="small" style="margin-top:.6rem">Full backup includes notes and file attachments. Share file contains statuses only — never files, never personal dates, never your reroll counter.</p>' +
+      '<p class="small" style="margin-top:.4rem">' + esc(usage) + '</p>' +
     '</div>' +
 
     '<div class="card" style="margin-top:1rem">' +
       '<h3>Danger</h3>' +
-      '<p class="small">Clears all history, statuses, streaks and daily picks. Notes, files and custom content are kept.</p>' +
+      '<p class="small">Clears history, statuses, streaks and daily picks. Notes, files and custom content are kept.</p>' +
       '<button class="btn" id="resetBtn" style="border-color:var(--danger);color:var(--danger)">Reset history</button>' +
     '</div>';
 
   renderCustomList();
 
   $('#setTheme').addEventListener('change', async e => {
-    settings.theme = e.target.value; applyTheme(); await Storage.saveSettings(settings);
+    settings.theme = e.target.value; applyA11y(); await Storage.saveSettings(settings);
+  });
+  $('#setFont').addEventListener('change', async e => {
+    settings.fontSize = e.target.value; applyA11y(); await Storage.saveSettings(settings);
+  });
+  $('#setMotion').addEventListener('change', async e => {
+    settings.motion = e.target.value; applyA11y(); await Storage.saveSettings(settings);
   });
   $('#setSound').addEventListener('change', async e => {
     settings.sound = e.target.checked; await Storage.saveSettings(settings);
@@ -1225,13 +1528,44 @@ async function renderSettings() {
     settings.ambient = e.target.checked; await Storage.saveSettings(settings);
     if (settings.ambient) startAmbient(); else stopAmbient();
   });
+  $('#setLock').addEventListener('change', async e => {
+    settings.categoryLock = e.target.value;
+    await Storage.saveSettings(settings);
+    renderLockSelect();
+  });
   $('#addCat').addEventListener('click', addCategory);
   $('#expBtn').addEventListener('click', exportBackup);
+  $('#shareBtn').addEventListener('click', shareMyHistory);
   $('#impBtn').addEventListener('click', () => $('#impFile').click());
-  $('#impFile').addEventListener('change', importBackup);
+  $('#impFile').addEventListener('change', importFile);
   $('#resetBtn').addEventListener('click', resetArchive);
 }
 
+function themeOptions(cur) {
+  const T = [
+    ['dark','Obsidian (dark)'], ['parchment','Parchment (light)'],
+    ['aegean','Aegean (dark)'], ['verdigris','Verdigris (dark)'],
+    ['moonstone','Moonstone (light)'], ['rosewood','Rosewood (light)'],
+    ['amber','Amber (dark)'], ['surrealism','Surrealism (dark)'],
+    ['scientific','Scientific (dark)'], ['professional','Professional (dark)'],
+    ['classic','Classic (dark)'], ['celestial','Celestial (dark)']
+  ];
+  return T.map(t => '<option value="' + t[0] + '"' + (cur === t[0] ? ' selected' : '') + '>' + t[1] + '</option>').join('');
+}
+
+function renderLockSelect() {
+  const el = $('#lockSelect');
+  if (!el) return;
+  const cur = settings.categoryLock || 'any';
+  el.innerHTML = '<option value="any"' + (cur === 'any' ? ' selected' : '') + '>Any field</option>' +
+    CATS.map(c => '<option value="' + esc(c.key) + '"' + (cur === c.key ? ' selected' : '') + '>' + esc(c.name) + '</option>').join('');
+  el.onchange = async function () {
+    settings.categoryLock = el.value;
+    await Storage.saveSettings(settings);
+  };
+}
+
+/* ---------- Custom content ---------- */
 function renderCustomList() {
   const wrap = $('#customList');
   if (!wrap) return;
@@ -1262,79 +1596,220 @@ function renderCustomList() {
     deleteTopic(p[0], parseInt(p[1], 10));
   }));
 }
-
 async function addCategory() {
-  const name = prompt('Category name?');
-  if (!name) return;
+  const name = prompt('Category name?'); if (!name) return;
   const key = 'cus' + Date.now().toString(36);
-  custom[key] = { name: name.slice(0, 60), items: [] };
-  await Storage.saveCustom(custom);
-  rebuildIndex();
-  renderSettings();
+  custom[key] = { name: name.slice(0,60), items:[] };
+  await Storage.saveCustom(custom); rebuildIndex(); renderSettings(); renderLockSelect();
   toast('Category added.');
 }
 async function deleteCategory(key) {
   if (!confirm('Delete this category and all its topics?')) return;
-  delete custom[key];
-  await Storage.saveCustom(custom);
-  rebuildIndex();
-  renderSettings();
+  delete custom[key]; await Storage.saveCustom(custom); rebuildIndex();
+  renderSettings(); renderLockSelect();
 }
 async function addTopic(key) {
-  const name = prompt('Topic name?');
-  if (!name) return;
+  const name = prompt('Topic name?'); if (!name) return;
   const def = prompt('Definition (1–2 sentences)?') || '';
-  const rel = (prompt('Three related topics, comma-separated?') || '').split(',').map(s => s.trim()).filter(Boolean).slice(0, 3);
+  const rel = (prompt('Three related topics, comma-separated?') || '').split(',').map(s => s.trim()).filter(Boolean).slice(0,3);
   while (rel.length < 3) rel.push('');
   const q = prompt('Open research question?') || '';
-  custom[key].items.push([name.slice(0, 120), def, rel, q]);
-  await Storage.saveCustom(custom);
-  rebuildIndex();
-  renderSettings();
+  custom[key].items.push([name.slice(0,120), def, rel, q]);
+  await Storage.saveCustom(custom); rebuildIndex(); renderSettings();
   toast('Topic added.');
 }
 async function deleteTopic(key, idx) {
   if (!confirm('Delete this topic?')) return;
   custom[key].items.splice(idx, 1);
-  await Storage.saveCustom(custom);
-  rebuildIndex();
-  renderSettings();
+  await Storage.saveCustom(custom); rebuildIndex(); renderSettings();
 }
 
+/* ---------- Backup & share ---------- */
 async function exportBackup() {
   toast('Preparing backup…');
   try {
     const data = await Storage.exportBackup();
-    const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(data)], { type:'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = 'arcana-archive-backup-' + todayStr() + '.json';
+    a.href = url; a.download = 'arcana-full-' + todayStr() + '.json';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
+    state.lastBackupAt = new Date().toISOString();
+    await Storage.setState(state);
+    updateBackupBanner();
     toast('Backup downloaded.');
+    if (currentView === 'settings') renderSettings();
   } catch (e) { toast('Backup failed: ' + e.message); }
 }
-function importBackup(e) {
+
+function shareMyHistory() {
+  const body = $('#modalBody');
+  body.innerHTML =
+    '<div class="cat">Share</div>' +
+    '<h2 id="modalTitle">Share my history</h2>' +
+    '<p class="small">Exports your statuses so a friend can merge them. Files are never included. Your reroll counter and personal dates are never included.</p>' +
+    '<label class="chk"><input type="checkbox" id="shNotes"> Include my notes</label>' +
+    '<label class="chk"><input type="checkbox" id="shCustom"> Include my custom categories</label>' +
+    '<div class="row" style="margin-top:.9rem">' +
+      '<button class="btn" id="shGo">Create share file</button>' +
+      '<button class="btn" id="shCancel">Cancel</button>' +
+    '</div>';
+  $('#modal').classList.remove('hidden');
+  $('#shCancel').addEventListener('click', closeModal);
+  $('#shGo').addEventListener('click', async () => {
+    const opts = { includeNotes: $('#shNotes').checked, includeCustom: $('#shCustom').checked };
+    const data = await Storage.exportShare(opts);
+    const blob = new Blob([JSON.stringify(data)], { type:'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'arcana-share-' + todayStr() + '.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    closeModal();
+    toast('Share file downloaded.');
+  });
+}
+
+async function importFile(e) {
   const f = e.target.files && e.target.files[0];
   if (!f) return;
   const fr = new FileReader();
   fr.onload = async function () {
     let obj;
     try { obj = JSON.parse(fr.result); } catch (err) { toast('That file is not valid JSON.'); return; }
-    if (!obj || obj.app !== 'Arcana Archive') { toast('Not an Arcana Archive backup.'); return; }
-    if (!confirm('Importing will overwrite all current data. Continue?')) return;
-    try {
-      await Storage.importBackup(obj);
-      toast('Backup imported. Reloading…');
-      setTimeout(() => location.reload(), 900);
-    } catch (err) { toast('Import failed: ' + err.message); }
+    if (!obj || (obj.app !== 'arcana-archive' && obj.app !== 'Arcana Archive')) {
+      toast('Not an Arcana Archive file.'); return;
+    }
+    if (obj.type === 'share') return importShare(obj);
+    return importFull(obj);
   };
   fr.readAsText(f);
   e.target.value = '';
 }
 
+function importFull(obj) {
+  if (!obj.state || !Array.isArray(obj.history)) { toast('Malformed full backup.'); return; }
+  if (!confirm('Replace everything with this backup? Your current history, statuses, notes, files and custom content will be overwritten.')) return;
+  (async () => {
+    try {
+      await Storage.importBackup(obj);
+      toast('Backup imported. Reloading…');
+      setTimeout(() => location.reload(), 900);
+    } catch (err) { toast('Import failed: ' + err.message); }
+  })();
+}
+
+async function importShare(obj) {
+  if (!obj.statuses || typeof obj.statuses !== 'object') { toast('Malformed share file.'); return; }
+  const ids = Object.keys(obj.statuses);
+  let known = 0, unknown = 0, newSeen = 0, newRes = 0, newer = 0;
+  const planned = [];
+  ids.forEach(id => {
+    if (!BYID[id]) { unknown++; return; }
+    known++;
+    const incoming = obj.statuses[id] || {};
+    const mine = state.status[id];
+    if (!mine) {
+      planned.push({ id:id, target: incoming.s === 'researched' ? 'researched' : 'seen', revisit: !!incoming.revisit, fresh:true });
+      if (incoming.s === 'researched') newRes++; else newSeen++;
+    } else if (incoming.s === 'researched' && mine !== 'researched') {
+      planned.push({ id:id, target:'researched', revisit: !!(incoming.revisit || state.revisit[id]), fresh:false });
+      newer++;
+    } else if (incoming.revisit && !state.revisit[id]) {
+      planned.push({ id:id, target:mine, revisit:true, fresh:false });
+    }
+  });
+  const noteIds = obj.notes ? Object.keys(obj.notes) : [];
+  const customKeys = obj.custom ? Object.keys(obj.custom) : [];
+
+  const body = $('#modalBody');
+  body.innerHTML =
+    '<div class="cat">Share file</div>' +
+    '<h2 id="modalTitle">Merge from a friend</h2>' +
+    '<p class="def">' + known + ' known topics, ' + (newSeen + newRes) + ' new to you (' + newRes + ' researched, ' + newSeen + ' seen)' +
+      (newer ? ', ' + newer + ' would be upgraded to researched' : '') +
+      '. ' + unknown + ' unknown topic ids will be ignored.</p>' +
+    (noteIds.length ? '<p class="small">Their file also carries ' + noteIds.length + ' note entr' + (noteIds.length === 1 ? 'y' : 'ies') + '.</p>' : '') +
+    (customKeys.length ? '<p class="small">It also carries ' + customKeys.length + ' custom categor' + (customKeys.length === 1 ? 'y' : 'ies') + '.</p>' : '') +
+    '<p class="small">Your own statuses are never downgraded. Your notes are never overwritten. Friend-sourced topics do not count toward your streak or achievements.</p>' +
+    '<div class="row">' +
+      (noteIds.length ? '<label class="chk"><input type="checkbox" id="imNotes"> Import their notes where I have none</label>' : '') +
+      '<label class="chk"><input type="checkbox" id="imCustom" checked> Import their custom categories</label>' +
+    '</div>' +
+    '<div class="row" style="margin-top:.9rem">' +
+      '<button class="btn" id="imGo">Merge</button>' +
+      '<button class="btn" id="imCancel">Cancel</button>' +
+    '</div>';
+  $('#modal').classList.remove('hidden');
+  $('#imCancel').addEventListener('click', closeModal);
+  $('#imGo').addEventListener('click', async () => {
+    const wantNotes = $('#imNotes') ? $('#imNotes').checked : false;
+    const wantCustom = $('#imCustom') ? $('#imCustom').checked : false;
+    let added = 0, upgraded = 0, revisitAdded = 0;
+
+    for (const p of planned) {
+      if (p.fresh) {
+        state.status[p.id] = p.target;
+        state.source[p.id] = 'friend';
+        added++;
+      } else {
+        if (p.target === 'researched' && state.status[p.id] !== 'researched') {
+          state.status[p.id] = 'researched';
+          upgraded++;
+        }
+      }
+      if (p.revisit && !state.revisit[p.id]) { state.revisit[p.id] = true; revisitAdded++; }
+    }
+    await Storage.setState(state);
+
+    if (wantNotes && obj.notes) {
+      for (const id of Object.keys(obj.notes)) {
+        if (!BYID[id]) continue;
+        const mine = await Storage.getNote(id);
+        if ((mine.md && mine.md.trim()) || (mine.learned && mine.learned.trim())) continue;
+        const their = obj.notes[id] || {};
+        await Storage.saveNote(id, their.text || '', their.learned || '');
+      }
+    }
+    if (wantCustom && obj.custom) {
+      Object.keys(obj.custom).forEach(k => {
+        const their = obj.custom[k];
+        if (!their || !their.name) return;
+        let target = k;
+        let n = 1;
+        while (custom[target]) { target = k + '_' + (++n); }
+        custom[target] = { name: String(their.name).slice(0,60), items: Array.isArray(their.items) ? their.items : [] };
+      });
+      await Storage.saveCustom(custom);
+      rebuildIndex();
+    }
+
+    closeModal();
+    await refreshCounts();
+    await checkAchievements();
+    refreshCurrent();
+    toast('Added ' + added + ' topic' + (added === 1 ? '' : 's') +
+      (upgraded ? ', upgraded ' + upgraded : '') +
+      (revisitAdded ? ', ' + revisitAdded + ' revisit' : '') + '.');
+  });
+}
+
+/* ---------- Backup reminder ---------- */
+function updateBackupBanner() {
+  const el = $('#backupBanner');
+  if (!el) return;
+  const hasHistory = history && history.length > 0;
+  const snoozed = state.snoozeBackupUntil && Date.now() < state.snoozeBackupUntil;
+  const never = !state.lastBackupAt;
+  const old = state.lastBackupAt && (Date.now() - new Date(state.lastBackupAt).getTime()) > 14*24*3600*1000;
+  const show = hasHistory && !snoozed && (never || old);
+  el.classList.toggle('hidden', !show);
+}
+
+/* ---------- reset ---------- */
 async function resetArchive() {
-  if (!confirm('Reset the archive? All history, statuses and streaks will be cleared.')) return;
+  if (!confirm('Reset the archive? History, statuses and streaks will be cleared.')) return;
   await Storage.resetHistory();
   state = await Storage.getState();
   history = await Storage.getHistory();
@@ -1346,32 +1821,37 @@ async function resetArchive() {
   toast('Archive reset.');
   refreshCurrent();
   updateRerollUI();
+  updateBackupBanner();
 }
 
-let openTopicId = null;
+/* ---------- Topic modal ---------- */
 async function openTopic(id, focus) {
   const t = BYID[id];
   if (!t) { toast('Topic not found.'); return; }
-  openTopicId = id;
   const note = await Storage.getNote(id);
   const files = await Storage.getFiles(id);
   const st = state.status[id];
+  const friend = isFriend(id);
 
   $('#modalBody').innerHTML =
-    '<div class="cat">' + esc(t.catName) + '</div>' +
+    '<div class="cat">' + esc(t.catName) + (friend ? ' · from a friend' : '') + '</div>' +
     '<h2 id="modalTitle">' + esc(t.name) + '</h2>' +
     '<p class="def">' + esc(t.def) + '</p>' +
     '<p class="q">' + esc(t.q) + '</p>' +
-    '<div class="chips">' + t.related.map(r => '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+    '<div class="chips">' + t.related.map(r =>
+      '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+    resourceLinks(t.name) +
     '<div class="row">' +
       '<button class="btn" data-act="researched">' + (st === 'researched' ? 'Researched ✓' : 'Mark researched') + '</button>' +
       '<button class="btn" data-act="revisit">' + (state.revisit[id] ? 'Revisit ✓' : 'Revisit later') + '</button>' +
       '<button class="btn" data-act="share">Share card</button>' +
     '</div>' +
+    '<h3>What I learned</h3>' +
+    '<input type="text" id="learnedField" maxlength="200" placeholder="One line (max 200 characters)" style="width:100%" value="' + esc(note.learned || '') + '">' +
     '<h3>Notes</h3>' +
     '<div class="notewrap">' +
-      '<textarea id="noteEdit" aria-label="Markdown notes">' + esc(note) + '</textarea>' +
-      '<div class="preview" id="notePreview">' + renderMarkdown(note) + '</div>' +
+      '<textarea id="noteEdit" aria-label="Markdown notes">' + esc(note.md) + '</textarea>' +
+      '<div class="preview" id="notePreview">' + renderMarkdown(note.md) + '</div>' +
     '</div>' +
     '<h3>Attachments</h3>' +
     '<input type="file" id="fileInput" multiple aria-label="Attach files">' +
@@ -1382,35 +1862,43 @@ async function openTopic(id, focus) {
 
   $('#modalBody').querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {
     const act = b.dataset.act;
-    if (act === 'researched') markResearched(id);
+    if (act === 'researched') markResearched(id, { keepModal:true });
     else if (act === 'revisit') toggleRevisit(id);
     else if (act === 'share') shareCard(t);
   }));
   $('#modalBody').querySelectorAll('[data-peek]').forEach(b => b.addEventListener('click', () => openPeek(b.dataset.peek)));
 
   const ta = $('#noteEdit');
-  ta.addEventListener('input', () => {
-    const md = ta.value;
-    $('#notePreview').innerHTML = renderMarkdown(md);
+  const learned = $('#learnedField');
+  function scheduleSave() {
     clearTimeout(noteTimer);
     noteTimer = setTimeout(async () => {
-      const ok = await Storage.saveNote(id, md);
+      const ok = await Storage.saveNote(id, ta.value, (learned.value || '').trim().slice(0,200));
       if (!ok) toast('Could not save note.');
+      await refreshCounts();
+      await checkAchievements();
     }, 600);
+  }
+  ta.addEventListener('input', () => {
+    $('#notePreview').innerHTML = renderMarkdown(ta.value);
+    scheduleSave();
   });
+  learned.addEventListener('input', scheduleSave);
 
   $('#fileInput').addEventListener('change', async e => {
     const list = Array.from(e.target.files || []);
     for (const f of list) {
-      if (f.size > 25 * 1024 * 1024 && !confirm(f.name + ' is ' + (f.size / 1048576).toFixed(1) + ' MB and may fail to store. Continue?')) continue;
+      if (f.size > 25*1024*1024 && !confirm(f.name + ' is ' + (f.size/1048576).toFixed(1) + ' MB and may fail to store. Continue?')) continue;
       const ok = await Storage.saveFile(id, f);
       if (!ok) toast('Could not store ' + f.name + '.');
     }
     e.target.value = '';
-    renderFileList(id);
+    await renderFileList(id);
+    await refreshCounts();
+    await checkAchievements();
   });
 
-  renderFileList(id);
+  await renderFileList(id);
   if (focus === 'notes' && ta) ta.focus();
 }
 
@@ -1421,7 +1909,7 @@ async function renderFileList(id) {
   if (!files.length) { list.innerHTML = '<li class="small" style="border:none">No attachments.</li>'; return; }
   list.innerHTML = files.map(f =>
     '<li><span style="flex:1">' + esc(f.name) + '</span>' +
-    '<span class="small">' + (f.size / 1024).toFixed(0) + ' KB</span>' +
+    '<span class="small">' + (f.size/1024).toFixed(0) + ' KB</span>' +
     '<button class="btn small" data-dl="' + f.id + '">Download</button>' +
     '<button class="btn small" data-rm="' + f.id + '">Delete</button></li>').join('');
   list.querySelectorAll('[data-dl]').forEach(b => b.addEventListener('click', async () => {
@@ -1437,23 +1925,26 @@ async function renderFileList(id) {
   list.querySelectorAll('[data-rm]').forEach(b => b.addEventListener('click', async () => {
     if (!confirm('Delete this file?')) return;
     await Storage.deleteFile(Number(b.dataset.rm));
-    renderFileList(id);
+    await renderFileList(id);
   }));
 }
-function closeModal() { $('#modal').classList.add('hidden'); openTopicId = null; }
+function closeModal() { $('#modal').classList.add('hidden'); }
 
+/* ---------- Peek ---------- */
 function openPeek(name) {
   const t = BYNAME[norm(name)];
   const body = $('#peekBody');
   if (!t) {
     body.innerHTML = '<div class="cat">Peek</div><h2 id="peekTitle">' + esc(name) + '</h2>' +
-      '<p class="def">This topic is not in the archive, so there is nothing more to show. It is still a real thread worth pulling.</p>';
+      '<p class="def">This topic is not in the archive, so there is nothing more to show. It is still a real thread worth pulling.</p>' +
+      resourceLinks(name);
   } else {
     body.innerHTML =
       '<div class="cat">' + esc(t.catName) + ' · Peek</div>' +
       '<h2 id="peekTitle">' + esc(t.name) + '</h2>' +
       '<p class="def">' + esc(t.def) + '</p>' +
       '<div class="chips">' + t.related.map(r => '<button class="chip" data-peek="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>' +
+      resourceLinks(t.name) +
       '<div class="row">' +
         '<button class="btn" data-act="researched">' + (isResearched(t.id) ? 'Researched ✓' : 'Mark as researched') + '</button>' +
         '<button class="btn" data-act="open">Open topic</button>' +
@@ -1469,6 +1960,7 @@ function openPeek(name) {
 }
 function closePeek() { $('#peek').classList.add('hidden'); }
 
+/* ---------- Share card ---------- */
 function wrapText(ctx, text, x, y, maxW, lineH) {
   const words = String(text || '').split(/\s+/);
   let line = '';
@@ -1496,32 +1988,24 @@ function buildShareCanvas(t) {
   const grad = g.createLinearGradient(0, 0, 1200, 630);
   grad.addColorStop(0, bg1); grad.addColorStop(1, bg2);
   g.fillStyle = grad; g.fillRect(0, 0, 1200, 630);
-
   g.strokeStyle = brass; g.lineWidth = 2;
   g.strokeRect(36, 36, 1128, 558);
 
-  g.fillStyle = brass;
-  g.font = '600 22px Georgia, serif';
+  g.fillStyle = brass; g.font = '600 22px Georgia, serif';
   g.fillText('ARCANA ARCHIVE', 80, 100);
-
-  g.fillStyle = dim;
-  g.font = 'italic 20px Georgia, serif';
+  g.fillStyle = dim; g.font = 'italic 20px Georgia, serif';
   g.fillText(t.catName, 80, 132);
 
-  g.fillStyle = ink;
-  g.font = '600 52px Georgia, serif';
+  g.fillStyle = ink; g.font = '600 52px Georgia, serif';
   let y = wrapText(g, t.name, 80, 210, 1040, 60);
 
-  g.font = '26px Georgia, serif';
-  g.fillStyle = ink;
+  g.font = '26px Georgia, serif'; g.fillStyle = ink;
   y = wrapText(g, t.def, 80, y + 30, 1040, 38);
 
-  g.font = 'italic 24px Georgia, serif';
-  g.fillStyle = brass;
+  g.font = 'italic 24px Georgia, serif'; g.fillStyle = brass;
   y = wrapText(g, t.q, 80, y + 24, 1040, 34);
 
-  g.font = '18px Georgia, serif';
-  g.fillStyle = dim;
+  g.font = '18px Georgia, serif'; g.fillStyle = dim;
   g.fillText('Related: ' + t.related.join(' · '), 80, 560);
 
   return c;
@@ -1529,10 +2013,9 @@ function buildShareCanvas(t) {
 async function shareCard(t) {
   const c = buildShareCanvas(t);
   const blob = await new Promise(res => c.toBlob(res, 'image/png'));
-  const file = new File([blob], 'arcana-' + norm(t.name).replace(/[^a-z0-9]+/g, '-') + '.png', { type: 'image/png' });
-  if (navigator.canShare && navigator.canShare({ files: [file] })) {
-    try { await navigator.share({ files: [file], title: t.name, text: t.def }); return; }
-    catch (e) { /* fall through to download */ }
+  const file = new File([blob], 'arcana-' + norm(t.name).replace(/[^a-z0-9]+/g, '-') + '.png', { type:'image/png' });
+  if (navigator.canShare && navigator.canShare({ files:[file] })) {
+    try { await navigator.share({ files:[file], title:t.name, text:t.def }); return; } catch (e) {}
   }
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -1542,6 +2025,7 @@ async function shareCard(t) {
   toast('Share card downloaded.');
 }
 
+/* ---------- UI wiring ---------- */
 function bindUI() {
   $$('.nav-btn').forEach(b => b.addEventListener('click', () => switchView(b.dataset.view)));
 
@@ -1550,7 +2034,7 @@ function bindUI() {
     const info = rerollInfo();
     if (info.used >= 3) { toast('Reroll limit reached for today.'); return; }
     if (current) {
-      if (state.status[current.topic.id] === 'seen') delete state.status[current.topic.id];
+      if (state.status[current.topic.id] === 'seen' && !isFriend(current.topic.id)) delete state.status[current.topic.id];
       info.excluded.push(current.topic.id);
       Storage.setState(state).then(() => doSpin(true));
     } else doSpin(true);
@@ -1565,6 +2049,14 @@ function bindUI() {
   $('#libCat').addEventListener('change', renderLibrary);
   $('#libStatus').addEventListener('change', renderLibrary);
 
+  $('#bannerExport').addEventListener('click', exportBackup);
+  $('#bannerSnooze').addEventListener('click', async () => {
+    state.snoozeBackupUntil = Date.now() + 3*24*3600*1000;
+    await Storage.setState(state);
+    updateBackupBanner();
+    toast('Reminder snoozed for 3 days.');
+  });
+
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { closeModal(); closePeek(); return; }
     if (currentView !== 'spin') return;
@@ -1575,8 +2067,16 @@ function bindUI() {
       doSpin(false);
     }
   });
+
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const onChange = () => { if ((settings.motion || 'auto') === 'auto') applyA11y(); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
 }
 
+/* ---------- boot ---------- */
 async function init() {
   settings = await Storage.getSettings();
   state = await Storage.getState();
@@ -1584,11 +2084,15 @@ async function init() {
   custom = await Storage.getCustom();
   rerollInfo();
   rebuildIndex();
-  applyTheme();
+  applyA11y();
   bindUI();
   settleStrips('—', '—');
   updateRerollUI();
+  renderLockSelect();
+  await refreshCounts();
   switchView('spin');
+  updateBackupBanner();
+  await checkAchievements();
   if (settings.ambient) {
     const once = () => { startAmbient(); document.removeEventListener('pointerdown', once); };
     document.addEventListener('pointerdown', once);
@@ -1606,7 +2110,6 @@ else init();
 /* =========================================================================
    DATA — 12 categories × 50 topics.
    Item shape: [name, def, [related1, related2, related3], question]
-   IDs are generated in code as prefix-001 … prefix-050 by array order.
    ========================================================================= */
 const DATA = {
 sci:{name:"Science",items:[
